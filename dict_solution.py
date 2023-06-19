@@ -24,4 +24,6 @@ while mode != 'q':
     for item in items:
         print(item)
 
-    mode = input('Enter mode (q - quit, a = add, r = remove, s = sort): ')
+    mode = input('Enter mode (q - quit, a = add, r = remove): ')
+    if mode == 'q':
+        print(min(items, key=items.get()))
