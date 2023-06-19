@@ -2,7 +2,7 @@
 
 items = []
 
-mode = input('Enter mode (q - quit, a = add, r = remove, s = sort): ')
+mode = input('Enter mode (q - quit, a = add, r = remove): ')
 
 while mode != 'q':
     if mode == 'a':
@@ -20,10 +20,6 @@ while mode != 'q':
         for item in items:
             if item['subject'] == subject:
                 items.remove(item)
-
-    elif mode == 's':
-        directon = input('Enter direction (a - ascending, d - descending): ')
-        items.sort(key=sort_dict_by_subject, reverse=(directon == 'd'))
 
     for item in items:
         print(item)
