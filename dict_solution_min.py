@@ -24,3 +24,4 @@ while mode != 'q':
         res_dict = dict(zip(subjects, grades))
         print(res_dict)
         print('Subject that has minimum score: ', min(res_dict, key=res_dict.get))
+        print('Subject that has maximum score: ', max(res_dict, key=res_dict.get))
