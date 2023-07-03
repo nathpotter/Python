@@ -19,15 +19,15 @@ while value != 'q':
     is_last_step = False
 
     for t in taxes:
-        # Print step for calculate tax without newline
-        print("Step {0:,}-{1:,}".format(previous_step_max, t['max']), end='')
 
         # If max is None, then it is last steps
         if t['max'] == None:
+            print("Step {0:,}".format(previous_step_max), end='')
             step_tax = salary * t['rate']
             tax += step_tax
 
         else:
+            print("Step {0:,}-{1:,}".format(previous_step_max, t['max']), end='')
             range = t['max'] - previous_step_max
 
             if salary > range:
@@ -43,7 +43,7 @@ while value != 'q':
                 tax += step_tax
                 is_last_step = True
 
-        print(" tax rate: ", round(t['rate']*100), "% => Tax: {0:,}".format(round(step_tax, 2)))
+        print(" (rate: ", round(t['rate'],2) , "%) => Tax: {0:,}".format(round(step_tax, 2)))
         if is_last_step:
             break
 
