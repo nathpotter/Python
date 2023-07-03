@@ -1,0 +1,34 @@
+income=int(input("Your income?:"))
+tax=0
+tax1=0
+tax2=0
+tax3=0
+tax4=0
+tax5=0
+tax6=0
+tax7=0
+if(income<=150000):
+    tax=0
+elif(income<=300000):
+    x=income-150000
+    tax1=x*5/100
+elif(income<=500000):
+    x=500000-income
+    tax2=x*10/100+7500
+elif(income<=750000):
+    x=750000-income
+    tax3=x*15/100+50000
+elif(income<=1000000):
+    x=1000000-income
+    tax4=x*20/100+112500
+elif(income<=2000000):
+    x=2000000-income
+    tax5=x*25/100+200000
+elif(income<=5000000):
+    x=5000000-income
+    tax6=x*30/100+500000
+elif(income>5000000):
+    x=income-5000000
+    tax7=x*35/100+1500000
+total=tax1+tax2+tax3+tax4+tax5+tax6+tax7
+print(total)
