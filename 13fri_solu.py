@@ -9,15 +9,20 @@ def detect_Friday_13(year,month):
        return True
     return False
 
-m=input("Input month <eg., 01 = Jan> or q - quit: ")
-y=input("Input year <eg., 1989, 2023> or q - quit: ")
-while(m != "q" and y != "q"):
-  mo = int(m)
-  ye = int(y)
-  if(detect_Friday_13(year=ye,month=mo)):
-    print("This month", mo, "of year", ye, "has 13th Friday")
-  else:
-    print("This month", mo, "of year", ye, "has NO 13th Friday")
+ord = input("Start program to check 13th Fri? (y or n): ")
 
-  m=input("Input month <eg., 01 = Jan> or q - quit: ")
-  y=input("Input year <eg., 1989, 2023> or q - quit: ")
+if(ord == "y"):
+  m=input("Input month <eg., 01 = Jan> : ")
+  y=input("Input year <eg., 1989, 2023>: ")
+  while(ord != "n"):
+    mo = int(m)
+    ye = int(y)
+    if(detect_Friday_13(year=ye,month=mo)):
+      print("This month", mo, "of year", ye, "has 13th Friday")
+    else:
+      print("This month", mo, "of year", ye, "has NO 13th Friday")
+
+    ord = input("Start program to check 13th Fri? (y or n): ")
+    if(ord == "y"):
+      m=input("Input month <eg., 01 = Jan> : ")
+      y=input("Input year <eg., 1989, 2023>: ")
