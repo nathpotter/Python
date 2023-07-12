@@ -11,18 +11,16 @@ def detect_Friday_13(year,month):
 
 ord = input("Start program to check 13th Fri? (y or n): ")
 
-if(ord == "y"):
-  m=input("Input month <eg., 01 = Jan> : ")
-  y=input("Input year <eg., 1989, 2023>: ")
-  while(ord != "n"):
+while(ord != "n"):    
+  if(ord == "y"):
+    m=input("Input month <eg., 01 = Jan> : ")
+    y=input("Input year <eg., 1989, 2023>: ")
     mo = int(m)
     ye = int(y)
     if(detect_Friday_13(year=ye,month=mo)):
       print("This month", mo, "of year", ye, "has 13th Friday")
     else:
       print("This month", mo, "of year", ye, "has NO 13th Friday")
-
-    ord = input("Start program to check 13th Fri? (y or n): ")
-    if(ord == "y"):
-      m=input("Input month <eg., 01 = Jan> : ")
-      y=input("Input year <eg., 1989, 2023>: ")
+  elif(ord != "y" and ord != "n"):
+    print("Warning!: Please input only y or n.")
+  ord = input("Start program to check 13th Fri? (y or n): ")
